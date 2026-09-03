@@ -1,0 +1,4 @@
+BOT_TOKEN=replace_with_bot_token
+WEBHOOK_SECRET=replace_with_random_secret
+OWNER_CODE=replace_with_random_owner_code
+BACKUP_OWNER_CODE=replace_with_random_backup_code

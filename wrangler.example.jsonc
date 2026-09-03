@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "barber-booking-bot",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-16",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "BOT_USERNAME": "your_booking_bot",
+    "BARBER_NAME": "Имя мастера"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "REMINDER_SCHEDULER",
+        "class_name": "ReminderScheduler"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["ReminderScheduler"]
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "barber-booking-bot-db",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
