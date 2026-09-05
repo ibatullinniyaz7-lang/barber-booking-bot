@@ -156,7 +156,7 @@ async function notifyOwners(env, text, excludeChatId = null) {
 async function kickReminderScheduler(env) {
   if (!env.REMINDER_SCHEDULER) return;
   try {
-    const id = env.REMINDER_SCHEDULER.idFromName("barber-niyaz-reminders");
+    const id = env.REMINDER_SCHEDULER.idFromName("booking-reminders");
     const stub = env.REMINDER_SCHEDULER.get(id);
     await stub.fetch("https://reminder-scheduler.internal/kick");
   } catch (error) {
